@@ -1,0 +1,20 @@
+{
+  "name": "Social item remover",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "Remove some distracting social items",
+  "permissions": ["storage", "activeTab", "scripting", "tabGroups"],
+  "host_permissions": ["https://*.facebook.com/*"],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.facebook.com/*"],
+      "js": ["js/remover.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "html/popup.html"
+  }
+}
