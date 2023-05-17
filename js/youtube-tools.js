@@ -68,12 +68,12 @@ async function removeUnavailables() {
   }
 }
 
-const getTextToCompare() {
+const getTextToCompare = () => {
   // https://www.diffchecker.com/text-compare/
   const hid = Array.from(document.querySelectorAll('#primary #video-title'));
-  let jsonhid = ``
-  hid.forEach(x => {jsonhid += (x.innerText) + '\n'})
-  console.log(jsonhid)
+  let jsonhid = ``;
+  hid.forEach(x => {jsonhid += (x.innerText) + '\n'});
+  console.log(jsonhid);
 
-  return jsonhid
+  return jsonhid;
 }
